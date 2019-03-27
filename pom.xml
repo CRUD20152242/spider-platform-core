@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>spider-platform</groupId>
+    <artifactId>spider-platform</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spider-platform-common</module>
+        <module>spider-platform-dao</module>
+        <module>spider-platform-export</module>
+        <module>spider-platform-api</module>
+        <module>spider-platform-services</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>spider-platform</groupId>
+                <artifactId>spider-platform-common</artifactId>
+                <version>${spider-platform-ver}</version>
+            </dependency>
+            <dependency>
+                <groupId>spider-platform</groupId>
+                <artifactId>spider-platform-dao</artifactId>
+                <version>${spider-platform-ver}</version>
+            </dependency>
+            <dependency>
+                <groupId>spider-platform</groupId>
+                <artifactId>spider-platform-export</artifactId>
+                <version>${spider-platform-ver}</version>
+            </dependency>
+            <dependency>
+                <groupId>spider-platform</groupId>
+                <artifactId>spider-platform-api</artifactId>
+                <version>${spider-platform-ver}</version>
+            </dependency>
+            <dependency>
+                <groupId>spider-platform</groupId>
+                <artifactId>spider-platform-services</artifactId>
+                <version>${spider-platform-ver}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <spider-platform-ver>1.0-SNAPSHOT</spider-platform-ver>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <spider-platform-ver>1.0-SNAPSHOT</spider-platform-ver>
+            </properties>
+        </profile>
+        <profile>
+            <id>product</id>
+            <properties>
+                <spider-platform-ver>1.0-SNAPSHOT</spider-platform-ver>
+            </properties>
+        </profile>
+    </profiles>
+
+
+
+</project>
